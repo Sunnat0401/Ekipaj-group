@@ -1,0 +1,136 @@
+.about {
+  background: url("../../../public/bggggggg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 400px;
+  margin: 40px auto;
+  padding: 0px 60px;
+}
+.about-info {
+  text-align: center;
+}
+.about-card {
+  width: 250px;
+  height: 200px;
+  border: 2px solid #b32128;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+  background-color: #b32128;
+}
+
+.about-images {
+  transition: all 0.3s ease-in-out;
+}
+
+.about-text {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  padding: 3px 0px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-paragraph {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-card:hover .about-images {
+  transform: scale(1.1);
+}
+
+/* Hover holatida matn rangini o'zgartirish */
+.about-card:hover .about-text {
+  color: #fff; /* Hoverda matn oq rangga bo'ladi */
+}
+
+.about-card:hover .about-paragraph {
+  color: #fff; /* Hoverda paragraflar ham oq rangga bo'ladi */
+}
+
+/*Responsive media queries*/
+@media (min-width: 350px) and (max-width: 650px) {
+  .about .container {
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-card {
+    height: 180px;
+    padding: 10px;
+  }
+  .about-paragraph {
+    text-align: center;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 800px) {
+  .about .container {
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding-block: 50px;
+  }
+  .about-card {
+    height: 180px;
+    padding: 10px;
+  }
+  .about-paragraph {
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 992px) {
+  .about .container {
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: 30px;
+    justify-content: center;
+  }
+  .about-card {
+    height: 180px;
+    width: 200px;
+    padding: 10px;
+  }
+  .about-paragraph {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .about .container {
+    gap: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: 50px;
+    justify-content: space-evenly;
+  }
+  .about-card {
+    height: 180px;
+    width: 200px;
+    padding: 10px;
+  }
+  .about-paragraph {
+    text-align: center;
+  }
+}

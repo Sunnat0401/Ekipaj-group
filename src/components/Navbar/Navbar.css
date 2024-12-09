@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap");
+
+.navbar {
+  padding: 5px 50px;
+  transition: background-color 0.3s ease, top 0.3s ease, box-shadow 0.3s ease; /* Animations for background, position, and shadow */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  position: fixed; /* Fix navbar to the top */
+  top: 0; /* Keep it at the top */
+  /* background-color: rgba(255, 255, 255, 0.8);  */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(188, 185, 185, 0.1); /* Soft shadow effect */
+}
+
+.navbar .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 80px;
+  width: 220px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 100px;
+}
+
+.navbar-link {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000040;
+}
+.navbar-link {
+  transition: all 0.3s ease-in-out;
+}
+.navbar-list:hover .navbar-link {
+  color: #b32128;
+}
+.navbar-list {
+  list-style: none;
+}
+.navbar-btn {
+  width: 200px;
+  height: 60px;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 500;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  background: #b32128;
+  border: 1px solid #b32128;
+  transition: all 0.5s ease-in-out;
+}
+.navbar-btn:hover {
+  background-color: #fff;
+  color: #b32128;
+}
+.navbar-anchor {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-res {
+    display: block;
+    position: relative;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+  }
+  .navbar-top-res {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+    background-color: #b32128;
+    color: white;
+  }
+  .navbar-body-res {
+    height: 95vh;
+    margin: 0 auto;
+    background-color: #b32128;
+    position: fixed;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    top: 70px;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+  .navbar-body-res.active {
+    transform: translateX(0%);
+  }
+  .navbar-btn-res {
+    position: absolute;
+    right: 15px;
+    background-color: inherit;
+    border: none;
+  }
+  .navbar-res-btn {
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #b32128;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar-res-btn:hover {
+    background: white;
+    color: #b32128;
+    border: 1px solid white;
+  }
+  .navbar-anchor-res {
+    color: white;
+    text-decoration: none;
+  }
+  .navbar-res-btn:hover .navbar-anchor-res {
+    color: #b32128;
+    text-decoration: none;
+  }
+
+  .navbar-lists-res {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navbar-list-res {
+    list-style: none;
+  }
+  .navbar-link-res {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+  }
+  .navbar-link-res:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1050px) {
+  .navbar {
+    padding: 5px 20px;
+  }
+  .navbar-res {
+    display: none;
+  }
+  .navbar-btn {
+    width: 150px;
+    height: 60px;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    background: #b32128;
+    border: 1px solid #b32128;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar-lists {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .navbar-res {
+    display: none;
+  }
+}
