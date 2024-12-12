@@ -1,54 +1,51 @@
-import localFont from "next/font/local";
-import "./globals.css";
+import localFont from 'next/font/local'
+import './globals.css'
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+	src: './fonts/GeistVF.woff',
+	variable: '--font-geist-sans',
+	weight: '100 900',
+})
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+	src: './fonts/GeistMonoVF.woff',
+	variable: '--font-geist-mono',
+	weight: '100 900',
+})
 
 export const metadata = {
-  title: "Ekipaj",
-  description:
-    "Ekipaj - Professional Locksmith Services | 24/7 Availability. Ishonchlilik va tajriba har qanday obro`li qulfochi xizmatining asosidir. Professional qulfochilar turli xil qulf turlarini hal qilish uchun zarur bo`lgan bilim va ko`nikmalarga ega. An`anaviy mexanik qulflardan tortib, zamonaviy aqlli qulflargacha, ularning tajribasi har bir muammoni aniqlik va e`tibor bilan hal qilishni kafolatlaydi. 24/7 davomida mavjudlik katta afzallikdir. Qulf bilan bog`liq favqulodda vaziyatlar odatdagi ish vaqtiga bo`ysunmaydi; ular kun yoki tunning istalgan vaqtida yuz berishi mumkin. Kecha-kunduz ishlaydigan qulfochi xizmati har qanday vaqtda yordam berishga tayyor bo`lib, mijozga xotirjamlikni ta`minlaydi.",
-  keywords:
-    "qulf ochish, qulf xizmati, Ekipaj, qulf uchun, qulf buzish, qulflar, qulf, qulfochilar, qulf kerak, 24/7 ish, tezkor xizmar, qulf nusxalab berish, qulf nusxalari, aqlli quluflar, qulf tugirlash, Qulf bilan bog`liq, favqulodda vaziyatlar, odatdagi ish, vaqtiga bo`ysunmaydi, ular kun yoki tunning, istalgan, vaqtida, yuz berishi mumkin, kecha-kunduz, ishlaydigan, qulfochi xizmati, har qanday vaqtda yordam berishga tayyor bo`lib, mijozga xotirjamlikni ta`minlaydi.",
-  author: "Ekipaj",
-};
+	metadataBase: new URL('https://zamokchi.uz'),
+	title: 'Ekipaj',
+	description:
+		'Вскрываем замки любой сложности без каких-либо повреждений! Окажу услуги замена замка, ремонт, установка, замена личинок, аварийное открытие. Быстро, качественно. Электронный программируемый замок',
+	authors: [{ name: 'Ekipaj group', url: 'https://zamokchi.uz' }],
+	icons: { icon: '/logo.svg' },
+	openGraph: {
+		title: 'Ekipaj',
+		description:
+			'Вскрываем замки любой сложности без каких-либо повреждений! Окажу услуги замена замка, ремонт, установка, замена личинок, аварийное открытие. Быстро, качественно. Электронный программируемый замок',
+		type: 'website',
+		url: 'https://zamokchi.uz',
+		locale: 'uz_UZ',
+		images: 'https://media.graphassets.com/sbySXlHERq6sSYjGrEgS',
+		countryName: 'Uzbekistan',
+		siteName: 'Ekipaj',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		description:
+			'Вскрываем замки любой сложности без каких-либо повреждений! Окажу услуги замена замка, ремонт, установка, замена личинок, аварийное открытие. Быстро, качественно. Электронный программируемый замок',
+		images: ['https://media.graphassets.com/sbySXlHERq6sSYjGrEgS'],
+		site: 'Ekipaj',
+		title: 'Ekipaj',
+	},
+	keywords:
+		'Вскрыть замок двери, Вскрыть дверной замок, Вскрыть замок в квартиру, Вскрыть дверь, Вскрыть железную дверь, Вскрыть металлическую дверь, Вскрыть пластиковую дверь, Вскрыть стеклянную дверь, Вскрыть деревянную дверь, Вскрыть сейф, Открыть замок, Открыть замок двери, Открыть дверной замок, Открыть замок в квартиру, Открыть дверь, Открыть железную дверь, Открыть металлическую дверь, Открыть пластиковую дверь, Открыть стеклянную дверь, Открыть деревянную дверь, Замена входных замков, Замена дверного замка двери, Замена дверного замка металлической двери, Замена замка в двери с выездом, Замена замка в двери цена, Замена замка в железной двери, Замена замка на входной металлической двери, Замена замков, Замена замков в квартире, Замена замков в металлической двери, Замена замков в замена замков с выездом, Замена замков выезд мастера, Замена замков ремонт дверей, Замена замков цена, Замена личинки замка, Замена личинки замка входной двери, Замена личинки замка двери, Замена замков двери, Ремонт, Замена замков, Врезка дверных замков, Врезка замка в входную дверь, Врезка замка в железную дверь, Врезка замка, Вызвать мастера, Врезка замка мастер, Врезка замков.',
+}
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <link rel="icon" href="../../public/favicon.jpg" />
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Qulf",
-      "name": "Ekipaj Qulf xizmatlari",
-      "description": "Ekipaj - Professional Locksmith Services | 24/7 Availability. Ishonchlilik va tajriba har qanday obro'li qulfochi xizmatining asosidir. Professional qulfochilar turli xil qulf turlarini hal qilish uchun zarur bo'lgan bilim va ko'nikmalarga ega. An'anaviy mexanik qulflardan tortib, zamonaviy aqlli qulflargacha, ularning tajribasi har bir muammoni aniqlik va e'tibor bilan hal qilishni kafolatlaydi. 24/7 davomida mavjudlik katta afzallikdir. Qulf bilan bog'liq favqulodda vaziyatlar odatdagi ish vaqtiga bo'ysunmaydi; ular kun yoki tunning istalgan vaqtida yuz berishi mumkin. Kecha-kunduz ishlaydigan qulfochi xizmati har qanday vaqtda yordam berishga tayyor bo'lib, mijozga xotirjamlikni ta'minlaydi.",
-      "image": "/path/to/your/image.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Olmazor tumani",
-        "addressLocality": "Toshkent shahar",
-        "postalCode": "100000",
-        "addressCountry": "UZ"
-      },
-      "telephone": "++998900915567",
-      "openingHours": "Dus-Yak 00:00-23:59",
-      "url": "https://ekipaj.com"
-    }
-  `}
-        </script>
-      </body>
-    </html>
-  );
+	return (
+		<html lang='uz'>
+			<body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+		</html>
+	)
 }
