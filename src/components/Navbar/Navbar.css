@@ -27,7 +27,7 @@
   height: 80px;
   width: 220px;
   cursor: pointer;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .navbar-lists {

@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import logo from '../../../public/logo_main.jpg'
+import logo from '../../../public/logos.png'
 import { IoMdMenu } from "react-icons/io";
 import './Navbar.css'
 import { useState } from "react";
